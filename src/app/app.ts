@@ -8,6 +8,25 @@ import { DecimalPipe } from '@angular/common';
   templateUrl: './app.html',
 })
 export class App {
+  menuOpen = false;
+
+  readonly navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' }
+  ];
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
+
   readonly experiences = [
     {
       role: 'Director of Photography (DOP)',
